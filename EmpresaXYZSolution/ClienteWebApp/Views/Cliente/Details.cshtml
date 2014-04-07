@@ -1,0 +1,51 @@
+﻿@model ClienteWebApp.Models.Cliente
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Cliente</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.nome)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.nome)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.endereco)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.endereco)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.telResidencial)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.telResidencial)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.telCelular)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.telCelular)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.dataNascimento)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.dataNascimento)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.idCliente }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

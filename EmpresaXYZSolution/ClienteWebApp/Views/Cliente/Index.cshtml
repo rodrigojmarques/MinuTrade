@@ -1,0 +1,60 @@
+﻿@model IEnumerable<ClienteWebApp.Models.Cliente>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<table border="1">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.idCliente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.endereco)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.telResidencial)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.telCelular)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dataNascimento)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.idCliente)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.endereco)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.telResidencial)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.telCelular)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dataNascimento)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.idCliente }) |
+            @Html.ActionLink("Details", "Details", new { id=item.idCliente }) |
+        </td>
+    </tr>
+}
+
+</table>
